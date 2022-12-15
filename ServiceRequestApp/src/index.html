@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Service Request App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <base href="/">
+
+  <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" type="text/css" href="slide navbar style.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  
+    <!-- Favicon icon -->
+  <link rel="icon" type="assets/image/png" sizes="16x16" href="assets/images/favicon.png">
+  <title>Customer Invoice and Payment Management</title>
+    <!-- Bootstrap Core CSS -->
+  <link href="assets/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+
+  <link href="assets/css/lib/calendar2/semantic.ui.min.css" rel="stylesheet">
+  <link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet"> 
+  <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+  <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+  <link href="assets/css/helper.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/lib/sweetalert/sweetalert.css" rel="stylesheet">
+
+  <!-- Fabric .js -->
+
+  <script src="./assets/vendors//fabric.js-5.2.4-rc.1/dist//fabric.js"></script>
+  <script src="path/to/dom-to-image.min.js" />
+  <script>
+    domtoimage.toPng(node)
+    //...
+  </script> 
+
+  <!-- End Fabric .js -->
+
+  <script src="assets/js/lib/jquery/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <!-- <script src="assets/s/lib/bootstrap/js/popper.min.js"></script> -->
+  <script src="assets/js/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+  <script src="assets/js/jquery.slimscroll.js"></script>
+  <!--Menu sidebar -->
+  <script src="assets/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+  <script src="assets/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+
+    <!-- Amchart -->
+  <script src="assets/js/lib/morris-chart/raphael-min.js"></script>
+  <script src="assets/js/lib/morris-chart/morris.js"></script>
+  <script src="assets/js/lib/morris-chart/dashboard1-init.js"></script>
+
+	<script src="assets/js/lib/calendar-2/moment.latest.min.js"></script>
+    <!-- scripit init-->
+  <script src="assets/js/lib/calendar-2/semantic.ui.min.js"></script>
+    <!-- scripit init-->
+  <script src="assets/js/lib/calendar-2/prism.min.js"></script>
+    <!-- scripit init-->
+  <script src="assets/js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <!-- scripit init-->
+  <script src="assets/js/lib/calendar-2/pignose.init.js"></script>
+
+  <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+  <script src="assets/js/scripts.js"></script>
+    <!-- scripit init-->
+  <script src="assets/js/lib/sweetalert/sweetalert.min.js"></script>
+    <!-- scripit init-->
+  <script src="assets/js/lib/sweetalert/sweetalert.init.js"></script>
+  <script src="assets/js/custom.min.js"></script>
+
+    <!-- Datatable-->
+
+  <script src="assets/js/lib/datatables/datatables.min.js"></script>
+  <script src="assets/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="assets/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+  <script src="assets/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+  <script src="assets/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+  <script src="assets/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+  <script src="assets/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+  <script src="assets/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+  <script src="assets/js/lib/datatables/datatables-init.js"></script>
+
+    <!-- SweetAlert -->
+  <!-- <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+  <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <!-- script type="text/javascript" src="/assets/vendors/GoogleVisualCharts/loader.js"></script> -->
+
+  
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form [formGroup]="AddUserDetailsForm">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="email" name="txt" placeholder="User Name" [(ngModel)]="modelUserDetails.Username" formControlName="Username" required="">
+					<input type="date" name="Dob" placeholder="Dob" [(ngModel)]="modelUserDetails.Dob" formControlName="Dob" required="">
+					<input type="text" name="ContactNo" placeholder="ContactNo" [(ngModel)]="modelUserDetails.ContactNo" formControlName="ContactNo" required="">
+					<input type="text" name="Gender" placeholder="Gender" [(ngModel)]="modelUserDetails.Gender" formControlName="Gender" required="">
+					<input type="text" name="Password" placeholder="Password" [(ngModel)]="modelUserDetails.Password" formControlName="Password"  required="">
+					<button (click)="submitform()">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form [formGroup]="AddLoginDetailsForm">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="Username" [(ngModel)]="modelLoginDetails.Username" formControlName="Username" placeholder="User Name" required="">
+					<input type="text" name="pswd" [(ngModel)]="modelLoginDetails.Password" formControlName="Password" placeholder="Password" required="">
+					<button (click)="login(modelLoginDetails.Username,modelLoginDetails.Password)">Login</button>
+				</form>
+			</div>
+	</div>
+</body>
