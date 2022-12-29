@@ -12,6 +12,7 @@ import { environment } from '../../environments/environment';
 
 export class ServiceRequestService {
 
+  apiUrl= "http://localhost:34628";
   baseurl = "/api/ServiceRequest/";
 
   constructor(private httpClient: HttpClient) { }
@@ -19,18 +20,18 @@ export class ServiceRequestService {
   //localhost:34628/api/ServiceRequest/GetAllServiceRequest
 
   // getAllServiceRequest(): Observable<ServiceRequest[]> {
-  //   return this.httpClient.get<ServiceRequest[]>(environment.apiUrl + this.baseurl + 'GetAllServiceRequest')
+  //   return this.httpClient.get<ServiceRequest[]>(this.apiUrl + this.baseurl + 'GetAllServiceRequest')
   //   .pipe(
   //     catchError(this.errorHandler)
   //   )
   // }
 
   getAllServiceRequest() {
-    return this.httpClient.get(environment.apiUrl + this.baseurl +  "GetAllServiceRequest" );
+    return this.httpClient.get(this.apiUrl + this.baseurl +  "GetAllServiceRequest" );
    }
 
   getServiceRequestById(id : number): Observable<ServiceRequest> {
-    return this.httpClient.get<ServiceRequest>(environment.apiUrl  + this.baseurl +  'GetServiceRequestById/' + id)
+    return this.httpClient.get<ServiceRequest>(this.apiUrl  + this.baseurl +  'GetServiceRequestById/' + id)
     .pipe(
       catchError(this.errorHandler)
     )
@@ -38,19 +39,19 @@ export class ServiceRequestService {
 
   SaveServiceRequest(Req : any) {
 
-    return this.httpClient.post(environment.apiUrl + this.baseurl +  "AddServiceRequest", Req );
+    return this.httpClient.post(this.apiUrl + this.baseurl +  "AddServiceRequest", Req );
   }
 
   updateServiceRequest(id: number, ServiceRequest: any, httpOptions:any){
     //const httpOptions = {  headers: new HttpHeaders({'Content-Type': 'application/json'})   }
-    return this.httpClient.put(environment.apiUrl  + this.baseurl +  'UpdateServiceRequest/' + id, JSON.stringify(ServiceRequest),httpOptions)
+    return this.httpClient.put(this.apiUrl  + this.baseurl +  'UpdateServiceRequest/' + id, JSON.stringify(ServiceRequest),httpOptions)
     .pipe(
       catchError(this.errorHandler)
     );
   }
 
   delete(id: number,httpOptions:any){
-    return this.httpClient.delete<ServiceRequest>(environment.apiUrl  + this.baseurl +  'DBDeleteServiceRequest/' + id, httpOptions)
+    return this.httpClient.delete<ServiceRequest>(this.apiUrl  + this.baseurl +  'DBDeleteServiceRequest/' + id, httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
@@ -58,11 +59,11 @@ export class ServiceRequestService {
 
   SaveUserDetails(Sud : any) {
 
-    return this.httpClient.post(environment.apiUrl + this.baseurl +  "AddUserDetails", Sud );
+    return this.httpClient.post(this.apiUrl + this.baseurl +  "AddUserDetails", Sud );
   }
 
   getLoginDetails(Username:any, url:string = "/", Password:any){
-    return this.httpClient.get(environment.apiUrl  + this.baseurl +  "GetLoginDetails/" + Username + url + Password )
+    return this.httpClient.get(this.apiUrl  + this.baseurl +  "GetLoginDetails/" + Username + url + Password )
     .pipe(
       catchError(this.errorHandler)
     )

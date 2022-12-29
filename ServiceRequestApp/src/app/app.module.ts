@@ -14,6 +14,7 @@ import { NavbarComponent } from './views/serviceRequest/navbar/navbar.component'
 import { LoginComponent } from './views/serviceRequest/login/login.component';
 import { DataTablesModule } from 'angular-datatables';
 import { AuthguardServicesService } from '././services/authguard-services.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AuthguardServicesService } from '././services/authguard-services.servic
     BrowserAnimationsModule,
     FormsModule,
     DataTablesModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [AuthguardServicesService],
   bootstrap: [AppComponent]

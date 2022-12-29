@@ -70,7 +70,7 @@
                                         <div class="form-group row">
                                             <label class="control-label text-right col-md-2">Email</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="Email" name="Email" [(ngModel)]="modelServiceRequest.email" placeholder="Email" formControlName="email"  >
+                                                <input type="text" class="form-control" id="Email" name="Email" [(ngModel)]="modelServiceRequest.email" ngModel [email]="true" placeholder="Email" formControlName="email"  >
                                                 <!-- <small class="form-control-feedback">Example : CT00001</small>  -->
                                             </div>
                                         </div>

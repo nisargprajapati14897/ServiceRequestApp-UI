@@ -72,7 +72,7 @@ export class UpdateServiceRequestComponent implements OnInit {
       firstName: ['', Validators.maxLength(50), Validators.pattern("^[a-zA-Z0-9 _&+@#^()%!-]*$")],
       lastName: ['',  Validators.maxLength(50), Validators.pattern("^[a-zA-Z0-9 _&+@#^()%!-]*$")],
       mobileNo: [0,  Validators.maxLength(10), Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")],
-      email: [''],
+      email: ['',  Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")],
       enquiryPurpose: ['', Validators.maxLength(50)],
       comments: ['', Validators.required]
     });

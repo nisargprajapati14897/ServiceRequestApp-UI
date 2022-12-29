@@ -21,6 +21,7 @@ export class ListServiceRequestComponent implements OnInit {
   dtOptions: any = {}
   dtTrigger: Subject<any> = new Subject();
   dtElement: any;
+  page: number = 1;
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -88,7 +89,7 @@ export class ListServiceRequestComponent implements OnInit {
     this.router.navigate(["/Navbar/AddServiceRequest"]);
   }
 
-    deleteById(id: number) {
+  deleteById(id: number) {
       this.ServiceRequestService.delete(id,this.httpOptions).subscribe(data => {
         this.APIResponse = data;
         if (this.APIResponse.objResponse.statusCode == "200")
@@ -109,7 +110,7 @@ export class ListServiceRequestComponent implements OnInit {
           this.toastr.error("Transaction not completed.", "Transaction Fail", { timeOut: 5000,closeButton: true,progressBar: true,positionClass: "toast-top-right",extendedTimeOut: 2500,tapToDismiss: false,enableHtml: true});
         }
       },);
-    }
+  }
 
 }
 

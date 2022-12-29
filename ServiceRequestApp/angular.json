@@ -39,8 +39,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+				          "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -48,6 +48,11 @@
                   "maximumError": "4kb"
                 }
               ],
+              "optimization": {
+                "scripts": true,
+                 "styles": true,
+                 "fonts": false
+             },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
